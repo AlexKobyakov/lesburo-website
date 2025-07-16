@@ -1,7 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --font-size: 14px;
   --background: 0 0% 100%;
   --foreground: 222.2 84% 4.9%;
   --card: 0 0% 100%;
@@ -55,7 +58,7 @@
   }
 }
 
-/* РљР°СЃС‚РѕРјРЅС‹Рµ СЃС‚РёР»Рё РґР»СЏ Р»РµСЃРЅРѕР№ С‚РµРјР°С‚РёРєРё */
+/* Кастомные стили для лесной тематики */
 .forest-green {
   --primary: 142 76% 36%;
   --primary-foreground: 355 100% 97%;
