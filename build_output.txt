@@ -1,0 +1,53 @@
+
+> lesburo-website@1.0.0 build
+> next build
+
+  ▲ Next.js 14.2.30
+  - Experiments (use with caution):
+    · forceSwcTransforms
+
+   Creating an optimized production build ...
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../typescript/lib/typescript' in c:\AlexKo\lesburo\lesburo-website\node_modules\next\dist\build for build dependencies doesn't lead to expected result 'C:\AlexKo\lesburo\lesburo-website\node_modules\typescript\lib\typescript.js', but to 'c:\AlexKo\lesburo\lesburo-website\node_modules\typescript\lib\typescript.js' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../typescript/lib/typescript (expected C:\AlexKo\lesburo\lesburo-website\node_modules\typescript\lib\typescript.js)
+<w>  at file dependencies c:\AlexKo\lesburo\lesburo-website\node_modules\next\dist\build\load-jsconfig.js
+<w>  at file c:\AlexKo\lesburo\lesburo-website\node_modules\next\dist\build\load-jsconfig.js
+<w>  at file dependencies c:\AlexKo\lesburo\lesburo-website\node_modules\next\dist\build\webpack-config.js
+<w>  at file c:\AlexKo\lesburo\lesburo-website\node_modules\next\dist\build\webpack-config.js
+<w>  at file dependencies c:\AlexKo\lesburo\lesburo-website\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js
+<w>  at file c:\AlexKo\lesburo\lesburo-website\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js
+<w>  at resolve commonjs c:\AlexKo\lesburo\lesburo-website\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../typescript/lib/typescript' in c:\AlexKo\lesburo\lesburo-website\node_modules\next\dist\build for build dependencies doesn't lead to expected result 'C:\AlexKo\lesburo\lesburo-website\node_modules\typescript\lib\typescript.js', but to 'c:\AlexKo\lesburo\lesburo-website\node_modules\typescript\lib\typescript.js' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../typescript/lib/typescript (expected C:\AlexKo\lesburo\lesburo-website\node_modules\typescript\lib\typescript.js)
+<w>  at file dependencies c:\AlexKo\lesburo\lesburo-website\node_modules\next\dist\build\load-jsconfig.js
+<w>  at file c:\AlexKo\lesburo\lesburo-website\node_modules\next\dist\build\load-jsconfig.js
+<w>  at file dependencies c:\AlexKo\lesburo\lesburo-website\node_modules\next\dist\build\webpack-config.js
+<w>  at file c:\AlexKo\lesburo\lesburo-website\node_modules\next\dist\build\webpack-config.js
+<w>  at file dependencies c:\AlexKo\lesburo\lesburo-website\node_modules\next\dist\build\handle-externals.js
+<w>  at file c:\AlexKo\lesburo\lesburo-website\node_modules\next\dist\build\handle-externals.js
+<w>  at file dependencies c:\AlexKo\lesburo\lesburo-website\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js
+<w>  at file c:\AlexKo\lesburo\lesburo-website\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js
+<w>  at resolve commonjs c:\AlexKo\lesburo\lesburo-website\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/5) ...
+   Generating static pages (1/5) 
+   Generating static pages (2/5) 
+   Generating static pages (3/5) 
+ ✓ Generating static pages (5/5)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+┌ ○ /                                    27.7 kB         115 kB
+├ ○ /_not-found                          138 B          87.2 kB
+└ ƒ /api/proxy-image                     0 B                0 B
++ First Load JS shared by all            87 kB
+  ├ chunks/117-105bce9aa4399e15.js       31.5 kB
+  ├ chunks/fd9d1056-9e191f0896c1d560.js  53.6 kB
+  └ other shared chunks (total)          1.86 kB
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
