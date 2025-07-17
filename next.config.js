@@ -1,4 +1,4 @@
-/** @type {import('next').NextConfig} */
+﻿/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
@@ -19,11 +19,9 @@ const nextConfig = {
       },
     ],
   },
-
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
-  // output: 'standalone', // Отключаем для Vercel
   trailingSlash: false,
   poweredByHeader: false,
   generateEtags: false,
