@@ -1,3 +1,5 @@
+"use client";
+import { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
@@ -11,6 +13,12 @@ import {
 } from 'lucide-react';
 
 export function ContactSection() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const contactInfo = [
     {
       icon: MapPin,
@@ -37,6 +45,39 @@ export function ContactSection() {
       details: 'Сб-Вс: выходные дни'
     }
   ];
+
+  // Предотвращение hydration error
+  if (!mounted) {
+    return (
+      <section id="contacts" className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm mb-4">
+              <Phone className="w-4 h-4" />
+              Контакты
+            </div>
+            <h2 className="text-3xl lg:text-4xl text-gray-900 mb-4">
+              Свяжитесь с нами
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Готовы ответить на ваши вопросы и предоставить профессиональную консультацию
+            </p>
+          </div>
+          <div className="grid lg:grid-cols-2 gap-12">
+            <div className="space-y-8">
+              <div className="animate-pulse">
+                <div className="h-4 bg-gray-200 rounded mb-4"></div>
+                <div className="h-20 bg-gray-200 rounded"></div>
+              </div>
+            </div>
+            <div className="animate-pulse">
+              <div className="h-96 bg-gray-200 rounded"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section id="contacts" className="py-20 bg-white">
@@ -133,7 +174,7 @@ export function ContactSection() {
 
                 <div className="space-y-2">
                   <label className="text-sm text-gray-700">Тип услуги</label>
-                  <select className="w-full p-3 border border-gray-200 rounded-lg bg-input-background focus:outline-none focus:ring-2 focus:ring-green-500">
+                  <select className="w-full p-3 border border-gray-200 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-green-500">
                     <option>Выберите услугу</option>
                     <option>Лесоустройство</option>
                     <option>Лесопатологические обследования</option>
