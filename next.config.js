@@ -19,13 +19,11 @@ const nextConfig = {
       },
     ],
   },
-  experimental: {
-    optimizeCss: true,
-  },
+
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
-  output: 'standalone',
+  // output: 'standalone', // Отключаем для Vercel
   trailingSlash: false,
   poweredByHeader: false,
   generateEtags: false,

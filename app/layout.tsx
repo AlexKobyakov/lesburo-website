@@ -8,7 +8,6 @@ export const metadata = {
   description: 'Комплексные решения для лесного хозяйства. Лесоустройство, проектирование и сопровождение лесных участков.',
   keywords: 'лесбюро, лесопроектная организация, лесоустройство, лесные участки, проектирование',
   authors: [{ name: 'ООО "Лесбюро"' }],
-  viewport: 'width=device-width, initial-scale=1',
   robots: 'index, follow',
   openGraph: {
     title: 'ООО "Лесбюро" - Лесопроектная организация',
@@ -16,6 +15,11 @@ export const metadata = {
     type: 'website',
     locale: 'ru_RU',
   },
+}
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
 }
 
 export default function RootLayout({
