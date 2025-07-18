@@ -14,6 +14,22 @@ import {
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
 export function BlogSection() {
+  // Создаем простые SVG изображения для блога
+  const createBlogSVG = (title: string, color: string, icon: string) => `data:image/svg+xml,${encodeURIComponent(`
+    <svg width="400" height="250" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="blogGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:${color};stop-opacity:1" />
+          <stop offset="100%" style="stop-color:${color}dd;stop-opacity:1" />
+        </linearGradient>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#blogGrad)"/>
+      <circle cx="200" cy="100" r="40" fill="white" opacity="0.9"/>
+      <text x="200" y="110" font-family="Arial, sans-serif" font-size="30" fill="${color}" text-anchor="middle">${icon}</text>
+      <text x="200" y="220" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle" font-weight="bold">${title}</text>
+    </svg>
+  `)}`;
+
   const blogPosts = [
     {
       title: 'Цифровизация лесного хозяйства: тренды 2024 года',
@@ -24,7 +40,7 @@ export function BlogSection() {
       readTime: '7 мин',
       views: 1245,
       comments: 18,
-      image: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=250&fit=crop',
+      image: createBlogSVG('Цифровизация', '#3b82f6', '🖥️'),
       tags: ['ГИС', 'Цифровизация', 'Дроны', 'ИИ'],
       featured: true
     },
@@ -37,7 +53,7 @@ export function BlogSection() {
       readTime: '12 мин',
       views: 987,
       comments: 24,
-      image: 'https://images.unsplash.com/photo-1574946113821-178a72e61888?w=400&h=250&fit=crop',
+      image: createBlogSVG('Лесопатология', '#dc2626', '🔬'),
       tags: ['Короед', 'Вредители', 'Защита леса', 'Мониторинг'],
       featured: false
     },
@@ -50,7 +66,7 @@ export function BlogSection() {
       readTime: '9 мин',
       views: 756,
       comments: 12,
-      image: 'https://images.unsplash.com/photo-1516475080664-ed2fc6a32937?w=400&h=250&fit=crop',
+      image: createBlogSVG('Нормативы', '#7c3aed', '📋'),
       tags: ['Лесоустройство', 'Законодательство', 'Регламенты'],
       featured: false
     },
@@ -63,7 +79,7 @@ export function BlogSection() {
       readTime: '15 мин',
       views: 1123,
       comments: 31,
-      image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=250&fit=crop',
+      image: createBlogSVG('Экология', '#059669', '🌱'),
       tags: ['FSC', 'Сертификация', 'Экология', 'Экономика'],
       featured: true
     },
@@ -76,7 +92,7 @@ export function BlogSection() {
       readTime: '11 мин',
       views: 892,
       comments: 16,
-      image: 'https://images.unsplash.com/photo-1520637736862-4d197d17c27a?w=400&h=250&fit=crop',
+      image: createBlogSVG('ГИС', '#0891b2', '🗺️'),
       tags: ['ГИС', 'Картография', 'Данные', 'Автоматизация'],
       featured: false
     },
@@ -89,7 +105,7 @@ export function BlogSection() {
       readTime: '13 мин',
       views: 1034,
       comments: 22,
-      image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=250&fit=crop',
+      image: createBlogSVG('Климат', '#ea580c', '🌡️'),
       tags: ['Климат', 'Экосистемы', 'Адаптация', 'Прогнозы'],
       featured: false
     }

@@ -5,6 +5,30 @@ import { MapPin, Calendar, TreePine, ArrowRight } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
 export function ProjectsSection() {
+  // Создаем простые SVG изображения для проектов
+  const createProjectSVG = (title: string, color: string) => `data:image/svg+xml,${encodeURIComponent(`
+    <svg width="400" height="250" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:${color};stop-opacity:1" />
+          <stop offset="100%" style="stop-color:${color}aa;stop-opacity:1" />
+        </linearGradient>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#grad)"/>
+      <g transform="translate(20, 180)">
+        <g fill="white" opacity="0.8">
+          <polygon points="0,0 15,-40 30,0" />
+          <polygon points="60,0 75,-50 90,0" />
+          <polygon points="120,0 135,-35 150,0" />
+          <polygon points="180,0 195,-45 210,0" />
+          <polygon points="240,0 255,-30 270,0" />
+          <polygon points="300,0 315,-40 330,0" />
+        </g>
+      </g>
+      <text x="200" y="30" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="bold">${title}</text>
+    </svg>
+  `)}`;
+
   const projects = [
     {
       title: 'Лесоустройство Вологодской области',
@@ -13,7 +37,7 @@ export function ProjectsSection() {
       year: '2023',
       category: 'Лесоустройство',
       description: 'Комплексное лесоустройство с применением ГИС-технологий и космической съемки.',
-      image: 'https://images.unsplash.com/photo-1574946113821-178a72e61888?w=400&h=250&fit=crop',
+      image: createProjectSVG('Лесоустройство', '#059669'),
       tags: ['ГИС-технологии', 'Космоснимки', 'Картографирование']
     },
     {
@@ -23,7 +47,7 @@ export function ProjectsSection() {
       year: '2023',
       category: 'Лесопатология',
       description: 'Выявление очагов короеда и разработка мер борьбы с вредителями.',
-      image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=250&fit=crop',
+      image: createProjectSVG('Лесопатология', '#dc2626'),
       tags: ['Диагностика', 'Мониторинг', 'Рекомендации']
     },
     {
@@ -33,7 +57,7 @@ export function ProjectsSection() {
       year: '2022',
       category: 'Проектирование',
       description: 'Разработка проекта лесных культур на участках после сплошных рубок.',
-      image: 'https://images.unsplash.com/photo-1516475080664-ed2fc6a32937?w=400&h=250&fit=crop',
+      image: createProjectSVG('Восстановление', '#2563eb'),
       tags: ['Лесные культуры', 'Восстановление', 'Проектирование']
     },
     {
@@ -43,7 +67,7 @@ export function ProjectsSection() {
       year: '2022',
       category: 'ГИС-технологии',
       description: 'Создание цифровой системы учета и управления лесными ресурсами.',
-      image: 'https://images.unsplash.com/photo-1520637836862-4d197d17c27a?w=400&h=250&fit=crop',
+      image: createProjectSVG('ГИС-технологии', '#7c3aed'),
       tags: ['Цифровизация', 'Базы данных', 'Автоматизация']
     }
   ];

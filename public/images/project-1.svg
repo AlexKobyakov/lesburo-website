@@ -1,0 +1,23 @@
+<svg width="400" height="250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="projectGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#065f46;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#projectGradient1)"/>
+  <g transform="translate(20, 180)">
+    <g fill="#d1fae5">
+      <polygon points="0,0 15,-40 30,0" />
+      <polygon points="50,0 65,-50 80,0" />
+      <polygon points="100,0 115,-35 130,0" />
+      <polygon points="150,0 165,-45 180,0" />
+      <polygon points="200,0 215,-30 230,0" />
+      <polygon points="250,0 265,-55 280,0" />
+      <polygon points="300,0 315,-40 330,0" />
+    </g>
+  </g>
+  <text x="200" y="30" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle" font-weight="bold">
+    Проект лесоустройства
+  </text>
+</svg>
