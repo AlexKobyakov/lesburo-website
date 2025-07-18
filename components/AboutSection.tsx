@@ -99,7 +99,7 @@ export function AboutSection() {
           {/* Image */}
           <div className="relative">
             <ImageWithFallback
-              src="https://images.unsplash.com/photo-1516358237-24c4c743dd0b?w=600&h=400&fit=crop"
+              src="/images/team-work.svg"
               alt="Команда специалистов в лесу"
               className="w-full h-96 object-cover rounded-2xl shadow-xl"
             />

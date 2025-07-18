@@ -61,7 +61,7 @@ export function HeroSection() {
           <div className="relative">
             <div className="relative z-10">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=400&fit=crop"
+                src="/images/forest-landscape.svg"
                 alt="Лесной ландшафт"
                 className="w-full h-96 object-cover rounded-2xl shadow-2xl"
               />
