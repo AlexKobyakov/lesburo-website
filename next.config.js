@@ -21,7 +21,6 @@ const nextConfig = {
         pathname: '/**',
       },
     ],
-    // Добавляем настройки для лучшей работы с внешними изображениями
     minimumCacheTTL: 60,
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
@@ -33,7 +32,7 @@ const nextConfig = {
   poweredByHeader: false,
   generateEtags: false,
   compress: true,
-  // Добавляем заголовки для CORS
+  // Исправляем заголовки - не применяем nosniff к статическим файлам
   async headers() {
     return [
       {
@@ -58,15 +57,12 @@ const nextConfig = {
         ],
       },
       {
-        source: '/(.*)',
+        // Применяем безопасные заголовки только к HTML страницам
+        source: '/((?!_next|api|favicon.ico|images).*)',
         headers: [
           {
             key: 'X-Frame-Options',
             value: 'DENY',
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
           },
           {
             key: 'Referrer-Policy',
